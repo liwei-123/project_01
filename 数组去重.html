@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         const str = '85872637471533203552943982';
+
+         //统计出现最多的数字和次数
+
+         let cache = {};
+
+         for( const k of str ){
+             cache[k] = cache[k] ? cache[k] + 1 : 1;
+         }
+        //  console.log(cache);
+        let maxObj = {
+            name: '',
+            content: 0
+        }
+
+        for (let key in cache){
+            if(maxObj.content < cache[key]) {
+                maxObj.name = key;
+                maxObj.content = cache[key];
+            }
+        }
+        console.log(`${maxObj.name}出现的次数最多,出现了${maxObj.content}次`);
+        
+        //str去重
+
+       const result = Array.prototype.filter.call(str,function(item,index){
+            return str.indexOf(item) === index
+        })
+        console.log(result.join(""));
+
+        //排序
+        result.forEach(() => {
+            result.forEach((item,index) =>{
+                if(item < result[index + 1]){
+                    //数组解构
+                    [result[index],result[index + 1]] = [result[index + 1],result[index]]
+                }
+            })
+        });
+
+        console.log(result);
+    </script>
+</body>
+</html>

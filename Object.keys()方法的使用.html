@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,15 +8,12 @@
 </head>
 <body>
     <script>
-        var arr = [1200,1300,1600,2000,2300,1000]
-        var newArr = []
-        //把大于1500的元素添加给新数组
-        for(var i = 0; i < arr.length;i++){
-            if(arr[i] >= 1500){
-                newArr.push(arr[i])
-            }
+        var obj = {
+            name: 'liwei',
+            age: 18
         }
-        console.log(newArr);
+        console.log(Object.keys(obj));
+        //Object.keys的返回值是这个对象的属性名组成的数组
     </script>
 </body>
 </html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str = ''
+        for(var i = 10;i >= 1;i--){
+           for(var j = 1; j <= i; j++){
+               str += "☆"
+           }
+           str += '\n'
+        }
+        console.log(str);
+
+        //计算1-100的累加和
+
+        var i = 1;
+        var sum = 0;
+
+        while(i <= 100){
+            sum += i;
+            i++
+        }
+        console.log(sum);
+
+        //计算1-100 的偶数累加和
+
+        var j = 1
+        var sum1 = 0;
+        do{
+            if(j % 2 === 0) {
+                sum1 += j
+            }
+            j++
+        }while(j <= 100)
+        console.log(sum1);
+    </script>
+</body>
+</html>
