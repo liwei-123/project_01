@@ -1,0 +1,6 @@
+#忽略所有的dist文件夹
+dist/
+#忽略根目录下面的所有的dist文件夹
+/dist/
+#忽略www下面的所有pdf文件
+www/*.txt
